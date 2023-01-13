@@ -14,35 +14,3 @@ img {
   display: block;
   max-width: 100%;
 }
-
-.celsius {
-  width: 300px;
-  height: 40px;
-  margin: 50px 0 0 50px;
-}
-
-.button {
-  width: 200px;
-  height: 40px;
-  margin-top: 50px;
-}
-
-.value {
-  margin: 50px 0 0 50px;
-}
-
-.user_name {
-  width: 300px;
-  height: 40px;
-  margin: 50px 0 0 50px;
-}
-
-.button2 {
-  width: 200px;
-  height: 40px;
-  margin-top: 50px;
-}
-
-.admin {
-  margin: 50px 0 0 50px;
-}
