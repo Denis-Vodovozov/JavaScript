@@ -832,6 +832,126 @@ ul {
   }
 }
 
+.cart_items__main {
+  padding-top: 96px;
+  margin-bottom: 96px;
+}
+
 .hidden {
+  display: none;
+}
+
+.cart_items__title {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.cart_items__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.cart__block {
+  width: 652px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 17px 19px 24px 0px rgb(164 164 164);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 28px;
+  right: 22px;
+  cursor: pointer;
+}
+
+.close_block {
+  display: none;
+}
+
+.cart__block__image {
+  width: 262px;
+  height: 306px;
+}
+
+.cart__block__text {
+  width: 390px;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cart__block__text__name {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222222;
+  padding-bottom: 42px;
+}
+.cart__block__text__price {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #575757;
+  padding-bottom: 6px;
+}
+.cart__block__text__price__color__red {
+  color: #ef5b70;
+}
+.cart__block__text__color {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #575757;
+  padding-bottom: 6px;
+}
+.cart__block__text__size {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #575757;
+  padding-bottom: 6px;
+}
+.cart__block__text__quantity {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #575757;
+}
+.cart__block__quantity {
+  display: flex;
+}
+
+.cart__current {
+  width: 44px;
+  height: 25px;
+  text-align: center;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #575757;
+}
+
+.product__count {
   display: none;
 }

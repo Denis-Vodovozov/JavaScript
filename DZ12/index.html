@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="data.js"></script>
+    <script src="data.js" defer></script>
     <script src="script.js" defer></script>
-    <title>DZ11</title>
+    <script src="cartStatus.js" defer></script>
+    <script src="cart.js" defer></script>
+
+    <title>DZ12</title>
   </head>
 
   <body>
@@ -97,7 +100,7 @@
                 <a href="#"
                   ><img src="./img/forma4.png" alt="forma 4 image"
                 /></a>
-                <button class="navigation__cart__count">5</button>
+                <button class="navigation__cart__count" data-counter>0</button>
               </div>
             </div>
           </div>
@@ -215,9 +218,16 @@
           </h5>
           <div class="products__wrapper"></div>
           <template class="template">
-            <div class="product">
+            <div
+              class="product"
+              data-id=""
+              data-color=""
+              data-size=""
+              data-quantity=""
+            >
               <div class="product__img">
                 <div class="product__cart">
+                  <div class="product__count" data-counter>1</div>
                   <button class="product__cart__btn">
                     <img src="./img/cart.png" alt="cart logo image" />Add to
                     Cart
@@ -232,7 +242,7 @@
               </div>
             </div>
           </template>
-            <button class="button">Browse All Product</button>
+          <button class="button">Browse All Product</button>
         </section>
       </div>
       <section class="feature__main">
@@ -270,6 +280,10 @@
             </div>
           </div>
         </div>
+      </section>
+      <section class="cart_items__main hidden">
+        <h4 class="cart_items__title">Cart Items</h4>
+        <div class="container cart_items__container"></div>
       </section>
       <section class="subscribe__main">
         <div class="subscribe__main__background">

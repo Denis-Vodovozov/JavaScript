@@ -1,19 +1,27 @@
+"use strict";
+
 const data = JSON.parse(dataProductJson);
 
 const templateEl = document.querySelector(".template");
 const productsWrapper = document.querySelector(".products__wrapper");
+const button = document.querySelector(".button");
 
 const visible = 3;
-let from = 0;
-let to = visible;
+let start = 0;
+let end = 3;
 
-function showCards(from, to) {
-  for (let i = from; i < to; i++) {
+function showCards(start, end) {
+  for (let i = start; i < end; i++) {
     const element = data[i];
 
     const productEl = templateEl.content
       .querySelector(".product")
       .cloneNode(true);
+  
+    productEl.dataset.id = element.id;
+    productEl.dataset.color = element.color;
+    productEl.dataset.size = element.size;
+    productEl.dataset.quantity = element.quantity;
 
     const title = productEl.querySelector(".title__and__price__h1");
     title.textContent = element.title;
@@ -22,7 +30,7 @@ function showCards(from, to) {
     text.textContent = element.text;
 
     const price = productEl.querySelector(".title__and__price__price");
-    price.textContent = element.price;
+    price.textContent = "$" + element.price;
 
     const image = productEl.querySelector(".product__img__main");
     image.src = element.image;
@@ -32,19 +40,25 @@ function showCards(from, to) {
   }
 }
 
-const button = document.querySelector(".button");
+showCards(start, end);
 
 button.addEventListener("click", (e) => {
-  from = to;
-  to = to + visible;
+  start = end;
+  end = end + visible;
 
-  showCards(from, to);
+  showCards(start, end);
 
-  if (to >= data.length) {
-    button.remove();
+  if (end >= data.length) {
+    button.style.visibility = "hidden";
   }
-
   e.preventDefault();
 });
 
-showCards(from, to);
+
+
+
+
+
+
+
+
